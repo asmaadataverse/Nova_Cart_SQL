@@ -82,7 +82,6 @@ CREATE TABLE Review (
     CHECK (Rating BETWEEN 1 AND 5)
 );
 
-USE NovaCart;
 
 INSERT INTO Customer
     (CustomerID, FullName, Email, PhoneNumber, HomeAddress, JoinDate)
@@ -150,33 +149,22 @@ VALUES
 VALUES
     (1, 1, 1, 1200.00),
     (1, 3, 2, 450.00),
-
     (2, 2, 1, 2500.00),
     (2, 4, 2, 350.00),
-
     (3, 6, 1, 1800.00),
     (3, 11, 2, 600.00),
-
     (4, 12, 1, 1500.00),
-
     (5, 7, 1, 750.00),
     (5, 8, 2, 650.00),
-
     (6, 5, 1, 900.00),
-
     (7, 9, 2, 500.00),
     (7, 10, 1, 1100.00),
-
     (8, 1, 1, 1200.00),
     (8, 6, 1, 1800.00),
-
     (9, 4, 3, 350.00),
-
     (10, 2, 1, 2500.00),
     (10, 12, 1, 1500.00),
-
     (11, 8, 1, 650.00),
-
     (12, 3, 2, 450.00),
     (12, 11, 1, 600.00);
 
@@ -211,8 +199,6 @@ VALUES
     SELECT COUNT(*) AS TotalCustomers
 FROM Customer;
 
-USE NovaCart;
-
 SELECT 'Customer' AS TableName, COUNT(*) AS TotalRows FROM Customer
 UNION ALL
 SELECT 'Category', COUNT(*) FROM Category
@@ -226,8 +212,6 @@ UNION ALL
 SELECT 'Payment', COUNT(*) FROM Payment
 UNION ALL
 SELECT 'Review', COUNT(*) FROM Review;
-
-USE NovaCart;
 
 INSERT INTO Category (CategoryID, CategoryName)
 VALUES
